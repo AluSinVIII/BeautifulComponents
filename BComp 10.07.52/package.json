@@ -1,0 +1,19 @@
+{
+  "name": "bcomp",
+  "version": "1.0.0",
+  "description": "a library to use and create various components with a great community to back it up",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AluSinVIII/BeautifulComponents.git"
+  },
+  "author": "AluSinVIII",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AluSinVIII/BeautifulComponents/issues"
+  },
+  "homepage": "https://github.com/AluSinVIII/BeautifulComponents#readme"
+}
