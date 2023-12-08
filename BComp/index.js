@@ -1,9 +1,6 @@
-/**
- * @format
- */
+// BeautifulComponents/index.js
 
-import {AppRegistry} from 'react-native';
-import App from './App';
-import {name as appName} from './app.json';
+import BeautifulButton from './src/components/BeautifulButton';
+import BeautifulCard from './src/components/BeautifulCard';
 
-AppRegistry.registerComponent(appName, () => App);
+export { BeautifulButton, BeautifulCard };
