@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
-import BeautifulButton from '../BeautifulButton';
+import BeautifulButton from '../src/components/BeautifulButton';
 
 describe('BeautifulButton', () => {
   it('renders correctly', () => {
