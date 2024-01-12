@@ -25,6 +25,14 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import BeautifulButton from '../BeautifulComponents/BComp/src/components/BeautifulButton'; 
+import RoundedButton from '../BeautifulComponents/BComp/src/components/RoundedButton';
+import OutlineButton from '../BeautifulComponents/BComp/src/components/OutlineButton';
+import GradientButton from '../BeautifulComponents/BComp/src/components/GradientButton';
+import BeautifulSearchBar from '../BeautifulComponents/BComp/src/components/BeautifulSearchBar';
+import BeautifulForm from '../BeautifulComponents/BComp/src/components/BeautifulForm';
+import BeautifulNavBar from '../BeautifulComponents/BComp/src/components/BeautifulNavBar';
+
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
@@ -51,6 +59,7 @@ function Section({children, title}: SectionProps): React.JSX.Element {
         ]}>
         {children}
       </Text>
+      
     </View>
   );
 }
@@ -76,20 +85,24 @@ function App(): React.JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+
+      <Text style={styles.sectionTitle}>Les Beautifuls Composants</Text>
+      <BeautifulButton onPress={() => console.log('BeautifulButton pressed')}>
+        Press me!
+      </BeautifulButton>
+
+      <BeautifulSearchBar onSearch={() => console.log('Recherche:')} />
+
+      <BeautifulForm onSubmit={() => console.log('Formulaire soumis:')} />
+
+      <BeautifulNavBar
+        title="Mon écran principal"
+        onBackPress={() => console.log('Retour pressé')}
+        onMenuPress={() => console.log('Menu pressé')}
+      />
+
+<Text style={styles.sectionTitle}>Les Composants de la Beautiful Community:</Text>
+        
         </View>
       </ScrollView>
     </SafeAreaView>
